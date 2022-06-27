@@ -4,12 +4,8 @@
 mainwindow::mainwindow(QWidget *parent) : QMainWindow(parent) , ui(new Ui::mainwindow) {
     ui->setupUi(this);
 
-    ui -> showLine -> setText(
-                QString::fromStdString(
-                    "Line " + std::to_string(ui -> textEdit -> textCursor().blockNumber() + 1) +
-                    ", Column " + std::to_string(ui -> textEdit -> textCursor().columnNumber() + 1)
-                    )
-                );
+    // set showLine label to cursor's location on first start.
+    cursorLoc();
 
     // creating event controls
     // when the action clicked, do this function...
@@ -76,6 +72,10 @@ void mainwindow::closeEvent(QCloseEvent *event) {
 }
 
 void mainwindow::cursorLoc() {
-    return;
+    ui -> showLine -> setText(
+                QString::fromStdString(
+                    "Line " + std::to_string(ui -> textEdit -> textCursor().blockNumber() + 1) +
+                    ", Column " + std::to_string(ui -> textEdit -> textCursor().columnNumber() + 1)
+                    )
+                );
 }
-
