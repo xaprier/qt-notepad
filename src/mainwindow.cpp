@@ -1,4 +1,12 @@
 #include "mainwindow.h"
+#include <QFile>
+#include <QMessageBox>
+#include <QCloseEvent>
+#include <QFontDialog>
+
+#include <QTextDocument>
+#include <QTextBlock>
+#include <QTextCursor>
 #include "./ui_mainwindow.h"
 
 mainwindow::mainwindow(QWidget *parent) : QMainWindow(parent) , ui(new Ui::mainwindow) {
@@ -44,31 +52,64 @@ void mainwindow::save() {
 }
 
 void mainwindow::saveAs() {
-    return;
+
 }
 
 void mainwindow::selectFont() {
-    return;
+    bool fontSelected;
+    QFont newFont = QFontDialog::getFont(&fontSelected, this);
+    ui -> textEdit -> setFontFamily(newFont.family()), setFontBold(newFont.bold()), setFontItalic(newFont.italic()), setFontUnderLine(newFont.underline());
+    ui -> textEdit -> setFontPointSize(newFont.pointSize());
 }
 
 void mainwindow::setFontUnderLine(bool underline) {
-    return;
+    underline ? ui -> textEdit -> setFontUnderline(true) : ui -> textEdit -> setFontUnderline(false);
 }
 
 void mainwindow::setFontItalic(bool italic) {
-    return;
+    italic ? ui -> textEdit -> setFontItalic(true) : ui -> textEdit -> setFontItalic(false);
 }
 
 void mainwindow::setFontBold(bool bold) {
-    return;
+    bold ? ui -> textEdit -> setFontWeight(QFont::Bold) : ui -> textEdit -> setFontWeight(QFont::Normal);
 }
 
 void mainwindow::about() {
-    return;
+    QMessageBox::about(this, tr("About Notepad"), tr(
+                           "The <b>Notepad</b> example demonstrates how to code a basic "
+                           "text editor using QtWdigets. <br><b>Coded by XAPRIER</b>"
+                           ));
 }
 
 void mainwindow::closeEvent(QCloseEvent *event) {
-    return;
+    QString text = ui -> textEdit -> toPlainText();
+    QString fileName = QWidget::windowTitle();
+    QFile file(fileName);
+    QTextStream in(&file);
+
+    if (!text.isEmpty()) {
+        if (!file.open(QIODevice::ReadOnly | QFile::Text)) {
+            QMessageBox::warning(this, "Warning", "An error occured: " + file.errorString());
+            return;
+        }
+        QString inText = in.readAll();
+        if (text != inText) {
+            QMessageBox::StandardButton reply = QMessageBox::question(
+                        this,
+                        "Save File",
+                        "File not saved. Save changes before closing?",
+                        QMessageBox::Save | QMessageBox::Cancel | QMessageBox::Close
+                        );
+            if (reply == QMessageBox::Save) {
+                save();
+                event -> accept();
+            } else if (reply == QMessageBox::Close) {
+                event -> accept();
+            } else {
+                event -> ignore();
+            }
+        }
+    }
 }
 
 void mainwindow::cursorLoc() {
@@ -78,4 +119,8 @@ void mainwindow::cursorLoc() {
                     ", Column " + std::to_string(ui -> textEdit -> textCursor().columnNumber() + 1)
                     )
                 );
+    QString fileName = QWidget::windowTitle();
+    if (!fileName.endsWith("~")) {
+        this->setWindowTitle(fileName + "~");
+    }
 }
