@@ -16,19 +16,19 @@ class mainwindow : public QMainWindow {
     explicit mainwindow(QWidget *parent = nullptr);
     ~mainwindow();
 
-  private slots:
-    void newDocument();
-    void open();
-    void save();
-    void saveAs();
-    void selectFont();
-    void setFontUnderLine(bool underline);
-    void setFontItalic(bool italic);
-    void setFontBold(bool bold);
-    void about();
-    void closeEvent(QCloseEvent *event);
-    void cursorLoc();
-    void notSaved();
+    private slots:
+        void newDocument();
+        void open();
+        void save();
+        void saveAs();
+        void selectFont();
+        void setFontUnderLine(bool underline);
+        void setFontItalic(bool italic);
+        void setFontBold(bool bold);
+        void about();
+        void closeEvent(QCloseEvent *event);
+        void cursorLoc();
+        void notSaved();
 
   private:
     Ui::mainwindow *ui;
