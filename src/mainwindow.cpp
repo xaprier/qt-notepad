@@ -43,6 +43,7 @@ mainwindow::~mainwindow() {
     delete ui;
 }
 
+=======
 void mainwindow::open() {
     // get the text in textEdit and assign to inText variable
     QString inText = ui->textEdit->toPlainText();
@@ -342,3 +343,5 @@ void mainwindow::notSaved() {
     if (!fileName.endsWith("~"))
         this->setWindowTitle(fileName + "~");
 }
+
+>>>>>>> 5fea135793b2bc3a311de2fc461caff1685ade77
