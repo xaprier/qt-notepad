@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Notepad</class>
- <widget class="QMainWindow" name="Notepad">
+ <class>mainwindow</class>
+ <widget class="QMainWindow" name="mainwindow">
   <property name="windowModality">
    <enum>Qt::ApplicationModal</enum>
   </property>
@@ -42,7 +42,7 @@
     <item row="1" column="0">
      <widget class="QLabel" name="showLine">
       <property name="text">
-       <string>TextLabel</string>
+       <string>Text</string>
       </property>
      </widget>
     </item>
@@ -54,7 +54,7 @@
      <x>0</x>
      <y>0</y>
      <width>606</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
    <property name="font">
@@ -212,6 +212,9 @@
   <action name="actionReplace">
    <property name="text">
     <string>Replace</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
    </property>
   </action>
  </widget>
