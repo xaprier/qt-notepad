@@ -37,6 +37,8 @@ mainwindow::mainwindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::mainwi
     // trigger every textEdit change
     connect(ui->textEdit, &QTextEdit::cursorPositionChanged, this, &mainwindow::cursorLoc);
     connect(ui->textEdit, &QTextEdit::textChanged, this, &mainwindow::notSaved);
+
+    connect(ui->actionExit, &QAction::triggered, this, &mainwindow::exit);
 }
 
 mainwindow::~mainwindow() {
@@ -147,7 +149,6 @@ void mainwindow::newDocument() {
 
         // get the file's text and read all of it
         QString text2 = in.readAll();
-        QMessageBox::warning(this, "Warning", "text: " + text + "\ntext2:" + text2);
         // if read text is not equal to our textEdit(not saved?)
         if (text != text2) {
             // create a message box and get the answer save or cancel or close
@@ -341,4 +342,54 @@ void mainwindow::notSaved() {
     // file not saved on every cursor change?
     if (!fileName.endsWith("~"))
         this->setWindowTitle(fileName + "~");
+}
+
+void mainwindow::exit() {
+    // get the text in textEdit and assign to text variable
+    QString text = ui->textEdit->toPlainText();
+    // if text is not empty and window title not ends with "~"
+    if (!text.isEmpty() || QWidget::windowTitle().endsWith("~")) {
+        // get window title and assign to fileName
+        QString fileName = QWidget::windowTitle();
+        // remove last character(~)
+        fileName.chop(1);
+        // create a QFile object with fileName
+        QFile file(fileName);
+        // create a text stream object with our file object
+        QTextStream in(&file);
+
+        // if file cannot open create a warning messagebox and return the function, else...
+        if (!file.open(QIODevice::ReadWrite | QFile::Text)) {
+            QMessageBox::warning(this, "Warning", "An error occured: " + file.errorString());
+            return;
+        }
+
+        // get the file's text and read all of it
+        QString text2 = in.readAll();
+        // if read text is not equal to our textEdit(not saved?)
+        if (text != text2) {
+            // create a message box and get the answer save or cancel or close
+            QMessageBox::StandardButton reply;
+            reply = QMessageBox::question(
+                this,
+                "Save File",
+                "File not saved. Save changes before closing?",
+                QMessageBox::Save | QMessageBox::Cancel | QMessageBox::Close
+                /*, QMessageBox::Cancel (for change default button)*/
+            );
+
+            // reply handle
+            if (reply == QMessageBox::Cancel) {
+                return;
+            } else if (reply == QMessageBox::Save) {
+                save();
+            } else {
+                QApplication::quit();
+            }
+        } else {
+            QApplication::quit();
+        }
+    } else {
+        QApplication::quit();
+    }
 }
