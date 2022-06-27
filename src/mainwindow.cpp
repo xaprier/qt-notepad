@@ -33,6 +33,7 @@ mainwindow::mainwindow(QWidget *parent) : QMainWindow(parent) , ui(new Ui::mainw
 
     // trigger every textEdit change
     connect(ui -> textEdit, &QTextEdit::cursorPositionChanged, this, &mainwindow::cursorLoc);
+    connect(ui -> textEdit, &QTextEdit::textChanged, this, &mainwindow::notSaved);
 }
 
 mainwindow::~mainwindow()
@@ -41,21 +42,32 @@ mainwindow::~mainwindow()
 }
 
 void mainwindow::open() {
+    // get the text in textEdit and assign to inText variable
     QString inText = ui -> textEdit -> toPlainText();
 
-    if (!inText.isEmpty()) {
+    // if inText is not empty and window title not ends with "~"
+    if (!inText.isEmpty() && !(QWidget::windowTitle().endsWith("~"))) {
+        // get window title and assign to fileName
         QString fileName = QWidget::windowTitle();
+        if (fileName.endsWith("~"))
+            // remove last character(~)
+            fileName.chop(1);
+        // create a QFile object with fileName
         QFile file(fileName);
+        // create a text stream object with our file object
         QTextStream in(&file);
 
+        // if file cannot open create a warning messagebox and return the function, else...
         if (!file.open(QIODevice::ReadOnly | QFile::Text)) {
             QMessageBox::warning(this, "Warning", "An error occured:: " + file.errorString());
             return;
         }
 
+        // get the file's text and read all of it
         QString inText2 = in.readAll();
-
+        // if read text is not equal to our textEdit(not saved?)
         if (inText != inText2) {
+            // create a message box and get the answer save or cancel or close
             QMessageBox::StandardButton reply;
             reply = QMessageBox::question(
                         this,
@@ -63,6 +75,8 @@ void mainwindow::open() {
                         "File not saved. Save changes before closing?",
                         QMessageBox::Save | QMessageBox::Cancel | QMessageBox::Close
                         );
+
+            // reply handle
             if (reply == QMessageBox::Save) {
                 save();
                 currentFile.clear();
@@ -74,47 +88,68 @@ void mainwindow::open() {
             } else {
                 return;
             }
+        // if textEdit's text equal to file's text
         } else {
             currentFile.clear();
             ui -> textEdit -> clear();
         }
+    // if the textEdit is empty and ends with "~"
     } else {
         currentFile.clear();
         ui -> textEdit -> clear();
         goto jmp;
     }
 jmp:
+    // create a open file dialog and get fileName from there
     QString fileName = QFileDialog::getOpenFileName(this, "Open File");
+    // if there is no file name
     if (fileName.isEmpty())
         return;
+    // create a file object and assign our fileName to currentFile
     QFile file(fileName);
     currentFile = fileName;
 
+    // if file cannot open create a warning messagebox and return the function, else...
     if (!file.open(QIODevice::ReadOnly | QFile::Text)) {
         QMessageBox::warning(this, "Warning", "Cannot open file: " + file.errorString());
         return;
     }
 
+    // set program's title to fileName
     setWindowTitle(fileName);
-
+    // create a textstream object and give it to our file's reference as parameter
     QTextStream in(&file);
+    // read all data from file and assign to text variable
     QString text = in.readAll();
+    // set our textEdit in our program to read data
     ui -> textEdit -> setText(text);
-
-
 }
 
 void mainwindow::newDocument() {
+    // get the text in textEdit and assign to text variable
     QString text = ui -> textEdit -> toPlainText();
-    if (!text.isEmpty()) {
+    // if text is not empty and window title not ends with "~"
+    if (!text.isEmpty() || QWidget::windowTitle().endsWith("~")) {
+        // get window title and assign to fileName
         QString fileName = QWidget::windowTitle();
+        // remove last character(~)
+        fileName.chop(1);
+        // create a QFile object with fileName
         QFile file(fileName);
+        // create a text stream object with our file object
         QTextStream in(&file);
+
+        // if file cannot open create a warning messagebox and return the function, else...
         if (!file.open(QIODeviceBase::ReadWrite | QFile::Text)) {
             QMessageBox::warning(this, "Warning", "An error occured: " + file.errorString());
         }
+
+        // get the file's text and read all of it
         QString text2 = in.readAll();
+        QMessageBox::warning(this, "Warning", "text: " + text + "\ntext2:" + text2);
+        // if read text is not equal to our textEdit(not saved?)
         if (text != text2) {
+            // create a message box and get the answer save or cancel or close
             QMessageBox::StandardButton reply;
             reply = QMessageBox::question(
                         this,
@@ -124,6 +159,7 @@ void mainwindow::newDocument() {
                         /*, QMessageBox::Cancel (for change default button)*/
                         );
 
+            // reply handle
             if (reply == QMessageBox::Save) {
                 save();
                 currentFile.clear();
@@ -136,11 +172,14 @@ void mainwindow::newDocument() {
             } else {
                 return;
             }
+        // if textEdit's text equal to file's text
         } else {
             currentFile.clear();
             ui -> textEdit -> clear();
         }
+    // if the textEdit is empty and not ends with "~"
     } else {
+        setWindowTitle("Notepad");
         currentFile.clear();
         ui -> textEdit -> clear();
     }
@@ -148,75 +187,97 @@ void mainwindow::newDocument() {
 
 void mainwindow::save() {
     QString fileName;
+    // is there a currentFile or not?
     if (currentFile.isEmpty()) {
+        // if not create a file dialog and get save file name and assign to fileName
         fileName = QFileDialog::getSaveFileName(this, "Save");
+        // if fileName is empty(not selected)
         if (fileName.isEmpty())
             return;
-        // refresh our text in notepad text section
+
+        // else new currentFile is gonna be fileName
         currentFile = fileName;
     } else {
-        // if doesnt empty our file, assign our file to new filename
+        // if it doesnt empty, assign our file to new filename
         fileName = currentFile;
     }
-
+    // create a QFile object and give it to our fileName
     QFile file(fileName);
 
-    // if the file read only for our file or not text file
+    // if file cannot open create a warning messagebox and return the function, else...
     if (!file.open(QFile::WriteOnly | QFile::Text)) {
         QMessageBox::warning(this, "Warning", "Cannot save file: " + file.errorString());
         return;
     }
 
-    // set the title of program to new file name
+    // currentFile name will gonna equal to new fileName
+    currentFile = fileName;
+    // set our program's title to fileName
     setWindowTitle(fileName);
-
+    // create a QTextStream object with name out and give file parameter's reference
     QTextStream out(&file);
+    // get our textSection's text and assign to text variable
     QString text = ui -> textEdit -> toPlainText();
-
+    // print the text variable to file
     out << text;
-
+    // close file
     file.close();
 }
 
 void mainwindow::saveAs() {
+    // open a getSaveFileName dialog with caption "Save As" and get fileName and assign to fileName
     QString fileName = QFileDialog::getSaveFileName(this, "Save As");
 
+    // if there is no fileName
     if (fileName.isEmpty()) return;
 
+    if (fileName.endsWith("~"))
+        // remove last character(~)
+        fileName.chop(1);
+    // open file with name fileName
     QFile file(fileName);
 
+    // if file cannot open create a warning messagebox and return the function, else...
     if (!file.open(QIODeviceBase::WriteOnly | QFile::Text)) {
         QMessageBox::warning(this, "Warning", "Cannot save file: " + file.errorString());
         return;
     }
 
+    // currentFile name will gonna equal to new fileName
     currentFile = fileName;
-
+    // set our program's title to fileName
     setWindowTitle(fileName);
-
+    // create a QTextStream object with name out and give file parameter's reference
     QTextStream out(&file);
+    // get our textSection's text and assign to text variable
     QString text = ui -> textEdit -> toPlainText();
+    // print the text variable to file
     out << text;
-
+    // close file
     file.close();
 }
 
 void mainwindow::selectFont() {
     bool fontSelected;
+    // create a font dialog and get the font to newFont variable, and set fontSelected logical variable to true
     QFont newFont = QFontDialog::getFont(&fontSelected, this);
+    // set the our textEdit section's family, weight, italic, underline and size
     ui -> textEdit -> setFontFamily(newFont.family()), setFontBold(newFont.bold()), setFontItalic(newFont.italic()), setFontUnderLine(newFont.underline());
     ui -> textEdit -> setFontPointSize(newFont.pointSize());
 }
 
 void mainwindow::setFontUnderLine(bool underline) {
+    // if logical underline is true then set to underliend, else not
     underline ? ui -> textEdit -> setFontUnderline(true) : ui -> textEdit -> setFontUnderline(false);
 }
 
 void mainwindow::setFontItalic(bool italic) {
+    // if logical italic is true then set font to italic, else not
     italic ? ui -> textEdit -> setFontItalic(true) : ui -> textEdit -> setFontItalic(false);
 }
 
 void mainwindow::setFontBold(bool bold) {
+    // if logical bold is true then set font weight to bold, else not
     bold ? ui -> textEdit -> setFontWeight(QFont::Bold) : ui -> textEdit -> setFontWeight(QFont::Normal);
 }
 
@@ -228,25 +289,34 @@ void mainwindow::about() {
 }
 
 void mainwindow::closeEvent(QCloseEvent *event) {
+    // get text from textEdit, get fileName from window title and create File and TextStream object
     QString text = ui -> textEdit -> toPlainText();
     QString fileName = QWidget::windowTitle();
+    // remove last character(~)
+    fileName.chop(1);
     QFile file(fileName);
     QTextStream in(&file);
 
-    if (!text.isEmpty()) {
+    // if our text section of program is empty
+    if (!text.isEmpty() || QWidget::windowTitle().endsWith("~")) {
+        // if the program cannot open the file
         if (!file.open(QIODeviceBase::ReadWrite)) {
             QMessageBox::warning(this, "Warning", "An error occured: " + file.errorString());
             return;
         }
 
+        // grab all the text in file to inText variable
         QString inText = in.readAll();
+        // if the file's text not equal to our text section's text(not saved)
         if (text != inText) {
+            // create a message box and get the answer save or cancel or close
             QMessageBox::StandardButton reply = QMessageBox::question(
                         this,
                         "Save File",
                         "File not saved. Save changes before closing?",
                         QMessageBox::Save | QMessageBox::Cancel | QMessageBox::Close
                         );
+            // reply handles
             if (reply == QMessageBox::Save) {
                 save();
                 event -> accept();
@@ -260,13 +330,19 @@ void mainwindow::closeEvent(QCloseEvent *event) {
 }
 
 void mainwindow::cursorLoc() {
+    // handle of line and columns
     ui -> showLine -> setText(
                 QString::fromStdString(
                     "Line " + std::to_string(ui -> textEdit -> textCursor().blockNumber() + 1) +
                     ", Column " + std::to_string(ui -> textEdit -> textCursor().columnNumber() + 1)
                     )
                 );
+}
+
+void mainwindow::notSaved() {
+    // get fileName from window title
     QString fileName = QWidget::windowTitle();
+    // file not saved on every cursor change?
     if (!fileName.endsWith("~"))
         this->setWindowTitle(fileName + "~");
 }
