@@ -343,4 +343,3 @@ void mainwindow::notSaved() {
     if (!fileName.endsWith("~"))
         this->setWindowTitle(fileName + "~");
 }
-
