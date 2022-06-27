@@ -344,4 +344,3 @@ void mainwindow::notSaved() {
         this->setWindowTitle(fileName + "~");
 }
 
->>>>>>> 5fea135793b2bc3a311de2fc461caff1685ade77
