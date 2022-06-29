@@ -1,5 +1,4 @@
 #include "mainwindow.h"
-#include "find.h"
 
 #include <QCloseEvent>
 #include <QFile>
