@@ -10,7 +10,7 @@ Clone the repository to your directory
 git clone https://github.com/xaprier/cpp-notepad.git
 ```
 
-Then you have to run these commands:
+Enter the direcotry of the source code
 ```sh
 cd cpp-notepad/src
 ```
