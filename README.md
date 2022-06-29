@@ -1,5 +1,7 @@
 # cpp-notepad
 A basic Text Editor program with C++ using Qt
+If you don't have Qt Library on your pc you can follow the instructions on this wiki
+`https://wiki.qt.io/Install_Qt_5_on_Ubuntu`
 
 ### Installation and setup of Text Editor
 
