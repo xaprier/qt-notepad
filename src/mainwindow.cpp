@@ -13,6 +13,7 @@
 
 #include "./ui_mainwindow.h"
 
+#pragma region Con - De - Structors
 mainwindow::mainwindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::mainwindow) {
     ui->setupUi(this);
 
@@ -45,8 +46,9 @@ mainwindow::mainwindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::mainwi
 mainwindow::~mainwindow() {
     delete ui;
 }
+#pragma endregion
 
-=======
+#pragma region functions
 void mainwindow::open() {
     // get the text in textEdit and assign to inText variable
     QString inText = ui->textEdit->toPlainText();
@@ -410,3 +412,4 @@ void mainwindow::replaceFunc() {
     replaceDialog replaceForm(this, ui->textEdit, c);
     replaceForm.exec();
 }
+#pragma endregion
