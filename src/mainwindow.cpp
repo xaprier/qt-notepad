@@ -32,14 +32,14 @@ mainwindow::mainwindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::mainwi
     connect(ui->actionBold, &QAction::triggered, this, &mainwindow::setFontBold);
     connect(ui->actionItalic, &QAction::triggered, this, &mainwindow::setFontItalic);
     connect(ui->actionUnderline, &QAction::triggered, this, &mainwindow::setFontUnderLine);
-    connect(ui -> actionFind, &QAction::triggered, this, &mainwindow::findFunc);
+    connect(ui->actionFind, &QAction::triggered, this, &mainwindow::findFunc);
+    connect(ui->actionReplace, &QAction::triggered, this, &mainwindow::replaceFunc);
 
     connect(ui->actionAbout_Notepad, &QAction::triggered, this, &mainwindow::about);
 
     // trigger every textEdit change
     connect(ui->textEdit, &QTextEdit::cursorPositionChanged, this, &mainwindow::cursorLoc);
     connect(ui->textEdit, &QTextEdit::textChanged, this, &mainwindow::notSaved);
-
 }
 
 mainwindow::~mainwindow() {
@@ -405,3 +405,8 @@ void mainwindow::findFunc() {
     findForm.exec();
 }
 
+void mainwindow::replaceFunc() {
+    QTextCursor c = ui->textEdit->textCursor();
+    replaceDialog replaceForm(this);
+    replaceForm.exec();
+}
