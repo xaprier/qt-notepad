@@ -1,42 +1,42 @@
 #include "finddialog.h"
-#include "ui_finddialog.h"
-#include "mainwindow.h"
+
 #include <QMessageBox>
 
-findDialog::findDialog(QWidget *parent, QTextEdit* textFile, QTextCursor cursor) : QDialog(parent), findui(new Ui::findDialog) {
+#include "mainwindow.h"
+#include "ui_finddialog.h"
+
+findDialog::findDialog(QWidget* parent, QTextEdit* textFile, QTextCursor cursor) : QDialog(parent), findui(new Ui::findDialog) {
     findui->setupUi(this);
     fileText = textFile;
     selectCursor = cursor;
 }
 
-findDialog::~findDialog()
-{
+findDialog::~findDialog() {
     delete findui;
 }
 
 int findDialog::location = 0;
 int findDialog::count = 0;
 
-void findDialog::on_pushButton_clicked()
-{
-    QString findWord = findui ->lineEdit-> text();
-    std::string Text = fileText->toPlainText().toStdString();
+void findDialog::on_pushButton_clicked() {
+    QString findWord = findui->lineEdit->text();
+    std::wstring Text = fileText->toPlainText().toStdWString();
 
     // find count of searched word
     if (location == 0) {
-        for (size_t i = Text.find(findWord.toStdString()); i != std::string::npos;  i = Text.find(findWord.toStdString(), i + findWord.length())) {
+        for (size_t i = Text.find(findWord.toStdWString()); i != std::string::npos; i = Text.find(findWord.toStdWString(), i + findWord.length())) {
             count++;
         }
     }
 
-    int found = Text.find(findWord.toStdString(), location);
+    int found = Text.find(findWord.toStdWString(), location);
     // if cannot find another...
     if (found == -1) {
         QMessageBox::warning(this, "No match", "No other matches found in the text");
         location = 0;
         selectCursor.setPosition(location, QTextCursor::MoveAnchor);
         selectCursor.setPosition(location, QTextCursor::KeepAnchor);
-    // else...
+        // else...
     } else {
         // set the found word selected
         selectCursor.setPosition(found, QTextCursor::MoveAnchor);
@@ -50,4 +50,3 @@ void findDialog::on_pushButton_clicked()
         count--;
     }
 }
-
