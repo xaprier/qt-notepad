@@ -5,6 +5,7 @@
 #include "mainwindow.h"
 #include "ui_finddialog.h"
 
+#pragma region Con - De - Structors
 findDialog::findDialog(QWidget* parent, QTextEdit* textFile, QTextCursor cursor) : QDialog(parent), findui(new Ui::findDialog) {
     findui->setupUi(this);
     fileText = textFile;
@@ -14,10 +15,12 @@ findDialog::findDialog(QWidget* parent, QTextEdit* textFile, QTextCursor cursor)
 findDialog::~findDialog() {
     delete findui;
 }
+#pragma endregion
 
 int findDialog::location = 0;
 int findDialog::count = 0;
 
+#pragma region functions
 void findDialog::on_pushButton_clicked() {
     QString findWord = findui->lineEdit->text();
     std::wstring Text = fileText->toPlainText().toStdWString();
@@ -50,3 +53,4 @@ void findDialog::on_pushButton_clicked() {
         count--;
     }
 }
+#pragma endregion
