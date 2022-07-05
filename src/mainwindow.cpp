@@ -406,6 +406,6 @@ void mainwindow::findFunc() {
 
 void mainwindow::replaceFunc() {
     QTextCursor c = ui->textEdit->textCursor();
-    replaceDialog replaceForm(this);
+    replaceDialog replaceForm(this, ui->textEdit, c);
     replaceForm.exec();
 }
