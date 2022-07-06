@@ -13,16 +13,19 @@ class findDialog : public QDialog {
     Q_OBJECT
 
   public:
-    explicit findDialog(QWidget* parent = nullptr, QTextEdit* textFile = nullptr, QTextCursor cursor = QTextCursor());
+    explicit findDialog(QWidget* parent = nullptr, QTextEdit* textFile = nullptr, QTextCursor cursor = QTextCursor(), QString fW = "");
     ~findDialog();
+    friend class replaceDialog;
 
   private slots:
-    void on_pushButton_clicked();
+    void pushFind();
 
   private:
     Ui::findDialog* findui;
+    QWidget* widget;
     QTextEdit* fileText;
     QTextCursor selectCursor;
+    QString findWord;
     static int location;
     static int count;
 };

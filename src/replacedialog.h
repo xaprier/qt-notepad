@@ -7,6 +7,8 @@
 #include <QTextEdit>
 #include <iostream>
 
+#include "finddialog.h"
+
 namespace Ui {
 class replaceDialog;
 }
@@ -19,12 +21,12 @@ class replaceDialog : public QDialog {
     ~replaceDialog();
 
   private slots:
-    void on_pushFind_clicked();
+    virtual void on_pushFind_clicked();
     void on_pushReplace_clicked();
     void on_pushRAll_clicked();
 
   private:
-    Ui::replaceDialog* replaceUi;
+    Ui::replaceDialog* ui;
     QTextEdit* fileText;
     QTextCursor selectCursor;
     static int location;

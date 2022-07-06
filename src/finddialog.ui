@@ -31,7 +31,7 @@
   <property name="windowTitle">
    <string>Find Text...</string>
   </property>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="txtFind">
    <property name="geometry">
     <rect>
      <x>9</x>
@@ -41,7 +41,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="pushFind">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -54,7 +54,7 @@
     <string>Find</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="countLabel">
    <property name="geometry">
     <rect>
      <x>9</x>
@@ -74,8 +74,8 @@
   </action>
  </widget>
  <tabstops>
-  <tabstop>lineEdit</tabstop>
-  <tabstop>pushButton</tabstop>
+  <tabstop>txtFind</tabstop>
+  <tabstop>pushFind</tabstop>
  </tabstops>
  <resources/>
  <connections/>
