@@ -15,19 +15,19 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
-    main.cpp
+    cpp-files/main.cpp
 
-    mainwindow.cpp
-    mainwindow.h
-    mainwindow.ui
+    cpp-files/mainwindow.cpp
+    header-files/mainwindow.h
+    design/mainwindow.ui
 
-    finddialog.h
-    finddialog.cpp
-    finddialog.ui
+    cpp-files/finddialog.cpp
+    header-files/finddialog.h
+    design/finddialog.ui
 
-    replacedialog.cpp
-    replacedialog.h
-    replacedialog.ui
+    cpp-files/replacedialog.cpp
+    header-files/replacedialog.h
+    design/replacedialog.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
