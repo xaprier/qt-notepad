@@ -1,4 +1,4 @@
-# cpp-notepad
+# qt-notepad
 A basic Text Editor program with C++ using Qt
 ### Recording code sessions and uploaded to YouTube playlist 
 <a href="https://www.youtube.com/watch?v=-xkuZwPqBVE&list=PLUWaeJl-QWILY0Hu6K2q3n2Qwz8P7gkX-" target="_blank">Click for playlist!</a>
