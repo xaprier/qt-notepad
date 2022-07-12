@@ -12,12 +12,12 @@ First of all you have to get the source files with Git, If you don't have git yo
 
 Clone the repository to your directory
 ```sh
-git clone https://github.com/xaprier/cpp-notepad.git
+git clone https://github.com/xaprier/qt-notepad.git
 ```
 
 Enter the direcotry of the source code
 ```sh
-cd cpp-notepad/src
+cd qt-notepad/src
 ```
 Build the makefile with CMake, if you don't have cmake you have to install it.
 ```sh
