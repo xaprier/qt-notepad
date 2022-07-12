@@ -1,9 +1,9 @@
 # cpp-notepad
 A basic Text Editor program with C++ using Qt
-Recording code sessions and uploaded to YouTube playlist 
+### Recording code sessions and uploaded to YouTube playlist 
 <a href="https://www.youtube.com/watch?v=-xkuZwPqBVE&list=PLUWaeJl-QWILY0Hu6K2q3n2Qwz8P7gkX-" target="_blank">Click for playlist!</a>
 
-If you don't have Qt Library on your pc you can follow the instructions on this wiki
+### If you don't have Qt Library on your pc you can follow the instructions on this wiki
 <a href="https://wiki.qt.io/Install_Qt_5_on_Ubuntu" target="_blank">Click For Wiki!</a>
 
 ### Installation and setup of Text Editor
