@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'replacedialog.ui'
 **
-** Created by: Qt User Interface Compiler version 6.3.1
+** Created by: Qt User Interface Compiler version 5.15.5
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -37,16 +37,16 @@ public:
         replaceDialog->resize(400, 173);
         txtFind = new QLineEdit(replaceDialog);
         txtFind->setObjectName(QString::fromUtf8("txtFind"));
-        txtFind->setGeometry(QRect(140, 30, 201, 28));
+        txtFind->setGeometry(QRect(130, 20, 211, 31));
         labelFind = new QLabel(replaceDialog);
         labelFind->setObjectName(QString::fromUtf8("labelFind"));
-        labelFind->setGeometry(QRect(90, 30, 63, 21));
+        labelFind->setGeometry(QRect(80, 20, 63, 31));
         labelReplace = new QLabel(replaceDialog);
         labelReplace->setObjectName(QString::fromUtf8("labelReplace"));
-        labelReplace->setGeometry(QRect(40, 70, 111, 21));
+        labelReplace->setGeometry(QRect(30, 60, 111, 31));
         txtReplace = new QLineEdit(replaceDialog);
         txtReplace->setObjectName(QString::fromUtf8("txtReplace"));
-        txtReplace->setGeometry(QRect(140, 70, 201, 28));
+        txtReplace->setGeometry(QRect(130, 60, 211, 31));
         pushFind = new QPushButton(replaceDialog);
         pushFind->setObjectName(QString::fromUtf8("pushFind"));
         pushFind->setGeometry(QRect(70, 130, 87, 29));
@@ -58,7 +58,7 @@ public:
         pushRAll->setGeometry(QRect(290, 130, 87, 29));
         countLabel = new QLabel(replaceDialog);
         countLabel->setObjectName(QString::fromUtf8("countLabel"));
-        countLabel->setGeometry(QRect(140, 100, 201, 21));
+        countLabel->setGeometry(QRect(130, 90, 211, 21));
 
         retranslateUi(replaceDialog);
 

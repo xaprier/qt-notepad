@@ -1,20 +1,19 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created by: The Qt Meta Object Compiler version 68 (Qt 6.3.1)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.5)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
 #include <memory>
 #include "../../../src/header-files/mainwindow.h"
-#include <QtGui/qtextcursor.h>
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'mainwindow.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 68
-#error "This file was generated using the moc from 6.3.1. It"
+#elif Q_MOC_OUTPUT_REVISION != 67
+#error "This file was generated using the moc from 5.15.5. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -23,35 +22,38 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_mainwindow_t {
-    const uint offsetsAndSize[44];
+    QByteArrayData data[22];
     char stringdata0[198];
 };
-#define QT_MOC_LITERAL(ofs, len) \
-    uint(offsetof(qt_meta_stringdata_mainwindow_t, stringdata0) + ofs), len 
+#define QT_MOC_LITERAL(idx, ofs, len) \
+    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
+    qptrdiff(offsetof(qt_meta_stringdata_mainwindow_t, stringdata0) + ofs \
+        - idx * sizeof(QByteArrayData)) \
+    )
 static const qt_meta_stringdata_mainwindow_t qt_meta_stringdata_mainwindow = {
     {
-QT_MOC_LITERAL(0, 10), // "mainwindow"
-QT_MOC_LITERAL(11, 11), // "newDocument"
-QT_MOC_LITERAL(23, 0), // ""
-QT_MOC_LITERAL(24, 4), // "open"
-QT_MOC_LITERAL(29, 4), // "save"
-QT_MOC_LITERAL(34, 6), // "saveAs"
-QT_MOC_LITERAL(41, 10), // "selectFont"
-QT_MOC_LITERAL(52, 16), // "setFontUnderLine"
-QT_MOC_LITERAL(69, 9), // "underline"
-QT_MOC_LITERAL(79, 13), // "setFontItalic"
-QT_MOC_LITERAL(93, 6), // "italic"
-QT_MOC_LITERAL(100, 11), // "setFontBold"
-QT_MOC_LITERAL(112, 4), // "bold"
-QT_MOC_LITERAL(117, 5), // "about"
-QT_MOC_LITERAL(123, 10), // "closeEvent"
-QT_MOC_LITERAL(134, 12), // "QCloseEvent*"
-QT_MOC_LITERAL(147, 5), // "event"
-QT_MOC_LITERAL(153, 9), // "cursorLoc"
-QT_MOC_LITERAL(163, 8), // "notSaved"
-QT_MOC_LITERAL(172, 4), // "exit"
-QT_MOC_LITERAL(177, 8), // "findFunc"
-QT_MOC_LITERAL(186, 11) // "replaceFunc"
+QT_MOC_LITERAL(0, 0, 10), // "mainwindow"
+QT_MOC_LITERAL(1, 11, 11), // "newDocument"
+QT_MOC_LITERAL(2, 23, 0), // ""
+QT_MOC_LITERAL(3, 24, 4), // "open"
+QT_MOC_LITERAL(4, 29, 4), // "save"
+QT_MOC_LITERAL(5, 34, 6), // "saveAs"
+QT_MOC_LITERAL(6, 41, 10), // "selectFont"
+QT_MOC_LITERAL(7, 52, 16), // "setFontUnderLine"
+QT_MOC_LITERAL(8, 69, 9), // "underline"
+QT_MOC_LITERAL(9, 79, 13), // "setFontItalic"
+QT_MOC_LITERAL(10, 93, 6), // "italic"
+QT_MOC_LITERAL(11, 100, 11), // "setFontBold"
+QT_MOC_LITERAL(12, 112, 4), // "bold"
+QT_MOC_LITERAL(13, 117, 5), // "about"
+QT_MOC_LITERAL(14, 123, 10), // "closeEvent"
+QT_MOC_LITERAL(15, 134, 12), // "QCloseEvent*"
+QT_MOC_LITERAL(16, 147, 5), // "event"
+QT_MOC_LITERAL(17, 153, 9), // "cursorLoc"
+QT_MOC_LITERAL(18, 163, 8), // "notSaved"
+QT_MOC_LITERAL(19, 172, 4), // "exit"
+QT_MOC_LITERAL(20, 177, 8), // "findFunc"
+QT_MOC_LITERAL(21, 186, 11) // "replaceFunc"
 
     },
     "mainwindow\0newDocument\0\0open\0save\0"
@@ -66,7 +68,7 @@ QT_MOC_LITERAL(186, 11) // "replaceFunc"
 static const uint qt_meta_data_mainwindow[] = {
 
  // content:
-      10,       // revision
+       8,       // revision
        0,       // classname
        0,    0, // classinfo
       15,   14, // methods
@@ -76,22 +78,22 @@ static const uint qt_meta_data_mainwindow[] = {
        0,       // flags
        0,       // signalCount
 
- // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  104,    2, 0x08,    1 /* Private */,
-       3,    0,  105,    2, 0x08,    2 /* Private */,
-       4,    0,  106,    2, 0x08,    3 /* Private */,
-       5,    0,  107,    2, 0x08,    4 /* Private */,
-       6,    0,  108,    2, 0x08,    5 /* Private */,
-       7,    1,  109,    2, 0x08,    6 /* Private */,
-       9,    1,  112,    2, 0x08,    8 /* Private */,
-      11,    1,  115,    2, 0x08,   10 /* Private */,
-      13,    0,  118,    2, 0x08,   12 /* Private */,
-      14,    1,  119,    2, 0x08,   13 /* Private */,
-      17,    0,  122,    2, 0x08,   15 /* Private */,
-      18,    0,  123,    2, 0x08,   16 /* Private */,
-      19,    0,  124,    2, 0x08,   17 /* Private */,
-      20,    0,  125,    2, 0x08,   18 /* Private */,
-      21,    0,  126,    2, 0x08,   19 /* Private */,
+ // slots: name, argc, parameters, tag, flags
+       1,    0,   89,    2, 0x08 /* Private */,
+       3,    0,   90,    2, 0x08 /* Private */,
+       4,    0,   91,    2, 0x08 /* Private */,
+       5,    0,   92,    2, 0x08 /* Private */,
+       6,    0,   93,    2, 0x08 /* Private */,
+       7,    1,   94,    2, 0x08 /* Private */,
+       9,    1,   97,    2, 0x08 /* Private */,
+      11,    1,  100,    2, 0x08 /* Private */,
+      13,    0,  103,    2, 0x08 /* Private */,
+      14,    1,  104,    2, 0x08 /* Private */,
+      17,    0,  107,    2, 0x08 /* Private */,
+      18,    0,  108,    2, 0x08 /* Private */,
+      19,    0,  109,    2, 0x08 /* Private */,
+      20,    0,  110,    2, 0x08 /* Private */,
+      21,    0,  111,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -124,11 +126,11 @@ void mainwindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 2: _t->save(); break;
         case 3: _t->saveAs(); break;
         case 4: _t->selectFont(); break;
-        case 5: _t->setFontUnderLine((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
-        case 6: _t->setFontItalic((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
-        case 7: _t->setFontBold((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 5: _t->setFontUnderLine((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 6: _t->setFontItalic((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 7: _t->setFontBold((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 8: _t->about(); break;
-        case 9: _t->closeEvent((*reinterpret_cast< std::add_pointer_t<QCloseEvent*>>(_a[1]))); break;
+        case 9: _t->closeEvent((*reinterpret_cast< QCloseEvent*(*)>(_a[1]))); break;
         case 10: _t->cursorLoc(); break;
         case 11: _t->notSaved(); break;
         case 12: _t->exit(); break;
@@ -139,18 +141,12 @@ void mainwindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     }
 }
 
-const QMetaObject mainwindow::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject mainwindow::staticMetaObject = { {
     QMetaObject::SuperData::link<QMainWindow::staticMetaObject>(),
-    qt_meta_stringdata_mainwindow.offsetsAndSize,
+    qt_meta_stringdata_mainwindow.data,
     qt_meta_data_mainwindow,
     qt_static_metacall,
     nullptr,
-qt_incomplete_metaTypeArray<qt_meta_stringdata_mainwindow_t
-, QtPrivate::TypeAndForceComplete<mainwindow, std::true_type>
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<bool, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<bool, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<bool, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QCloseEvent *, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
-
-
->,
     nullptr
 } };
 
@@ -179,7 +175,7 @@ int mainwindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 15;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 15)
-            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
+            *reinterpret_cast<int*>(_a[0]) = -1;
         _id -= 15;
     }
     return _id;
