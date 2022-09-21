@@ -1,0 +1,4 @@
+/home/xaprier/Desktop/git/cpp-notepad/build/CMakeFiles/notepad-cpp.dir
+/home/xaprier/Desktop/git/cpp-notepad/build/CMakeFiles/edit_cache.dir
+/home/xaprier/Desktop/git/cpp-notepad/build/CMakeFiles/rebuild_cache.dir
+/home/xaprier/Desktop/git/cpp-notepad/build/CMakeFiles/notepad-cpp_autogen.dir

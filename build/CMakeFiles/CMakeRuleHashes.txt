@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+30b612f5cfddf72019102080886a7270 CMakeFiles/notepad-cpp_autogen
