@@ -1,20 +1,19 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'replacedialog.h'
 **
-** Created by: The Qt Meta Object Compiler version 68 (Qt 6.3.1)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.5)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
 #include <memory>
 #include "../../../src/header-files/replacedialog.h"
-#include <QtGui/qtextcursor.h>
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'replacedialog.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 68
-#error "This file was generated using the moc from 6.3.1. It"
+#elif Q_MOC_OUTPUT_REVISION != 67
+#error "This file was generated using the moc from 5.15.5. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -23,18 +22,21 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_replaceDialog_t {
-    const uint offsetsAndSize[10];
+    QByteArrayData data[5];
     char stringdata0[78];
 };
-#define QT_MOC_LITERAL(ofs, len) \
-    uint(offsetof(qt_meta_stringdata_replaceDialog_t, stringdata0) + ofs), len 
+#define QT_MOC_LITERAL(idx, ofs, len) \
+    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
+    qptrdiff(offsetof(qt_meta_stringdata_replaceDialog_t, stringdata0) + ofs \
+        - idx * sizeof(QByteArrayData)) \
+    )
 static const qt_meta_stringdata_replaceDialog_t qt_meta_stringdata_replaceDialog = {
     {
-QT_MOC_LITERAL(0, 13), // "replaceDialog"
-QT_MOC_LITERAL(14, 19), // "on_pushFind_clicked"
-QT_MOC_LITERAL(34, 0), // ""
-QT_MOC_LITERAL(35, 22), // "on_pushReplace_clicked"
-QT_MOC_LITERAL(58, 19) // "on_pushRAll_clicked"
+QT_MOC_LITERAL(0, 0, 13), // "replaceDialog"
+QT_MOC_LITERAL(1, 14, 19), // "on_pushFind_clicked"
+QT_MOC_LITERAL(2, 34, 0), // ""
+QT_MOC_LITERAL(3, 35, 22), // "on_pushReplace_clicked"
+QT_MOC_LITERAL(4, 58, 19) // "on_pushRAll_clicked"
 
     },
     "replaceDialog\0on_pushFind_clicked\0\0"
@@ -45,7 +47,7 @@ QT_MOC_LITERAL(58, 19) // "on_pushRAll_clicked"
 static const uint qt_meta_data_replaceDialog[] = {
 
  // content:
-      10,       // revision
+       8,       // revision
        0,       // classname
        0,    0, // classinfo
        3,   14, // methods
@@ -55,10 +57,10 @@ static const uint qt_meta_data_replaceDialog[] = {
        0,       // flags
        0,       // signalCount
 
- // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   32,    2, 0x08,    1 /* Private */,
-       3,    0,   33,    2, 0x08,    2 /* Private */,
-       4,    0,   34,    2, 0x08,    3 /* Private */,
+ // slots: name, argc, parameters, tag, flags
+       1,    0,   29,    2, 0x08 /* Private */,
+       3,    0,   30,    2, 0x08 /* Private */,
+       4,    0,   31,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -83,18 +85,12 @@ void replaceDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
     (void)_a;
 }
 
-const QMetaObject replaceDialog::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject replaceDialog::staticMetaObject = { {
     QMetaObject::SuperData::link<QDialog::staticMetaObject>(),
-    qt_meta_stringdata_replaceDialog.offsetsAndSize,
+    qt_meta_stringdata_replaceDialog.data,
     qt_meta_data_replaceDialog,
     qt_static_metacall,
     nullptr,
-qt_incomplete_metaTypeArray<qt_meta_stringdata_replaceDialog_t
-, QtPrivate::TypeAndForceComplete<replaceDialog, std::true_type>
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
-
-
->,
     nullptr
 } };
 
@@ -123,7 +119,7 @@ int replaceDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 3;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 3)
-            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
+            *reinterpret_cast<int*>(_a[0]) = -1;
         _id -= 3;
     }
     return _id;
