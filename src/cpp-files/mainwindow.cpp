@@ -67,7 +67,7 @@ void mainwindow::open() {
 
         // if file cannot open create a warning messagebox and return the function, else...
         if (!file.open(QIODevice::ReadOnly | QFile::Text)) {
-            QMessageBox::warning(this, "Warning", "An error occured:: " + file.errorString());
+            QMessageBox::warning(this, "Warning", "An error occurred:: " + file.errorString());
             return;
         }
 
@@ -107,7 +107,7 @@ void mainwindow::open() {
         goto jmp;
     }
 jmp:
-    // create a open file dialog and get fileName from there
+    // create an open file dialog and get fileName from there
     QString fileName = QFileDialog::getOpenFileName(this, "Open File");
     // if there is no file name
     if (fileName.isEmpty())
@@ -148,7 +148,7 @@ void mainwindow::newDocument() {
 
         // if file cannot open create a warning messagebox and return the function, else...
         if (!file.open(QIODevice::ReadWrite | QFile::Text)) {
-            QMessageBox::warning(this, "Warning", "An error occured: " + file.errorString());
+            QMessageBox::warning(this, "Warning", "An error occurred: " + file.errorString());
         }
 
         // get the file's text and read all of it
@@ -201,10 +201,10 @@ void mainwindow::save() {
         if (fileName.isEmpty())
             return;
 
-        // else new currentFile is gonna be fileName
+        // else new currentFile is going to be fileName
         currentFile = fileName;
     } else {
-        // if it doesnt empty, assign our file to new filename
+        // if it doesn't empty, assign our file to new filename
         fileName = currentFile;
     }
     // create a QFile object and give it to our fileName
@@ -216,7 +216,7 @@ void mainwindow::save() {
         return;
     }
 
-    // currentFile name will gonna equal to new fileName
+    // currentFile name is going to be equal to new fileName
     currentFile = fileName;
     // set our program's title to fileName
     setWindowTitle(fileName);
@@ -249,7 +249,7 @@ void mainwindow::saveAs() {
         return;
     }
 
-    // currentFile name will gonna equal to new fileName
+    // currentFile name is going to be equal to new fileName
     currentFile = fileName;
     // set our program's title to fileName
     setWindowTitle(fileName);
@@ -267,13 +267,13 @@ void mainwindow::selectFont() {
     bool fontSelected;
     // create a font dialog and get the font to newFont variable, and set fontSelected logical variable to true
     QFont newFont = QFontDialog::getFont(&fontSelected, this);
-    // set the our textEdit section's family, weight, italic, underline and size
+    // set our textEdit section's family, weight, italic, underline and size
     ui->textEdit->setFontFamily(newFont.family()), setFontBold(newFont.bold()), setFontItalic(newFont.italic()), setFontUnderLine(newFont.underline());
     ui->textEdit->setFontPointSize(newFont.pointSize());
 }
 
 void mainwindow::setFontUnderLine(bool underline) {
-    // if logical underline is true then set to underliend, else not
+    // if logical underline is true then set to underlined, else not
     underline ? ui->textEdit->setFontUnderline(true) : ui->textEdit->setFontUnderline(false);
 }
 
@@ -289,7 +289,7 @@ void mainwindow::setFontBold(bool bold) {
 
 void mainwindow::about() {
     QMessageBox::about(this, tr("About Notepad"), tr("The <b>Notepad</b> example demonstrates how to code a basic "
-                                                     "text editor using QtWdigets. <br><b>Coded by XAPRIER</b>"));
+                                                     "text editor using QtWidgets. <br><b>Coded by XAPRIER</b>"));
 }
 
 void mainwindow::closeEvent(QCloseEvent *event) {
@@ -305,7 +305,7 @@ void mainwindow::closeEvent(QCloseEvent *event) {
     if (!text.isEmpty() || QWidget::windowTitle().endsWith("~")) {
         // if the program cannot open the file
         if (!file.open(QIODevice::ReadWrite)) {
-            QMessageBox::warning(this, "Warning", "An error occured: " + file.errorString());
+            QMessageBox::warning(this, "Warning", "An error occurred: " + file.errorString());
             return;
         }
 
@@ -364,7 +364,7 @@ void mainwindow::exit() {
 
         // if file cannot open create a warning messagebox and return the function, else...
         if (!file.open(QIODevice::ReadWrite | QFile::Text)) {
-            QMessageBox::warning(this, "Warning", "An error occured: " + file.errorString());
+            QMessageBox::warning(this, "Warning", "An error occurred: " + file.errorString());
             return;
         }
 

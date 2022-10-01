@@ -47,7 +47,7 @@ void findDialog::pushFind() {
     }
 
     int found = Text.find(findWord.toStdWString(), location);
-    // if cannot find another...
+    // if it cannot find another...
     if (found == -1) {
         QMessageBox::warning(widget, "No match", "No other matches found in the text");
         location = 0;

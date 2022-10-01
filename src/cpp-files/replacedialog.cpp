@@ -11,7 +11,7 @@ replaceDialog::replaceDialog(QWidget* parent, QTextEdit* textFile, QTextCursor c
     // assign constructor parameters to right variables
     fileText = textFile;
     selectCursor = cursor;
-    // there is no a connect for actions
+    // there is no connect for actions
     // the function names equal to Qt's connect names for pushButtons
 }
 
@@ -62,13 +62,13 @@ void replaceDialog::on_pushReplace_clicked() {
 
 void replaceDialog::on_pushRAll_clicked() {
     // do { call replace function } while count > 0
-    // there is a exit controlled loop for execute at least 1 time
+    // there is an exit controlled loop for execute at least 1 time
     do {
         replaceDialog::on_pushReplace_clicked();
     } while (count > 0);
 
     // we do the last time search and replace
-    // if we dont, the last word will not change
+    // if we don't, the last word will not change
     // because of location handling
 
     // take the value of txtFind box and assign to findWord
