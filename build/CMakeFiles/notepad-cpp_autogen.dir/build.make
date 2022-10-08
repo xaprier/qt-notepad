@@ -68,7 +68,7 @@ include CMakeFiles/notepad-cpp_autogen.dir/progress.make
 
 CMakeFiles/notepad-cpp_autogen:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/xaprier/Desktop/git/qt-notepad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target notepad-cpp"
-	/usr/bin/cmake -E cmake_autogen /home/xaprier/Desktop/git/qt-notepad/build/CMakeFiles/notepad-cpp_autogen.dir/AutogenInfo.json ""
+	/usr/bin/cmake -E cmake_autogen /home/xaprier/Desktop/git/qt-notepad/build/CMakeFiles/notepad-cpp_autogen.dir/AutogenInfo.json Debug
 
 notepad-cpp_autogen: CMakeFiles/notepad-cpp_autogen
 notepad-cpp_autogen: CMakeFiles/notepad-cpp_autogen.dir/build.make
