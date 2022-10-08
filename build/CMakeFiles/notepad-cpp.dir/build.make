@@ -73,71 +73,71 @@ CMakeFiles/notepad-cpp.dir/notepad-cpp_autogen/mocs_compilation.cpp.o: CMakeFile
 CMakeFiles/notepad-cpp.dir/notepad-cpp_autogen/mocs_compilation.cpp.o: notepad-cpp_autogen/mocs_compilation.cpp
 CMakeFiles/notepad-cpp.dir/notepad-cpp_autogen/mocs_compilation.cpp.o: CMakeFiles/notepad-cpp.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xaprier/Desktop/git/qt-notepad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/notepad-cpp.dir/notepad-cpp_autogen/mocs_compilation.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/notepad-cpp.dir/notepad-cpp_autogen/mocs_compilation.cpp.o -MF CMakeFiles/notepad-cpp.dir/notepad-cpp_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/notepad-cpp.dir/notepad-cpp_autogen/mocs_compilation.cpp.o -c /home/xaprier/Desktop/git/qt-notepad/build/notepad-cpp_autogen/mocs_compilation.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/notepad-cpp.dir/notepad-cpp_autogen/mocs_compilation.cpp.o -MF CMakeFiles/notepad-cpp.dir/notepad-cpp_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/notepad-cpp.dir/notepad-cpp_autogen/mocs_compilation.cpp.o -c /home/xaprier/Desktop/git/qt-notepad/build/notepad-cpp_autogen/mocs_compilation.cpp
 
 CMakeFiles/notepad-cpp.dir/notepad-cpp_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/notepad-cpp.dir/notepad-cpp_autogen/mocs_compilation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xaprier/Desktop/git/qt-notepad/build/notepad-cpp_autogen/mocs_compilation.cpp > CMakeFiles/notepad-cpp.dir/notepad-cpp_autogen/mocs_compilation.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xaprier/Desktop/git/qt-notepad/build/notepad-cpp_autogen/mocs_compilation.cpp > CMakeFiles/notepad-cpp.dir/notepad-cpp_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/notepad-cpp.dir/notepad-cpp_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/notepad-cpp.dir/notepad-cpp_autogen/mocs_compilation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xaprier/Desktop/git/qt-notepad/build/notepad-cpp_autogen/mocs_compilation.cpp -o CMakeFiles/notepad-cpp.dir/notepad-cpp_autogen/mocs_compilation.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xaprier/Desktop/git/qt-notepad/build/notepad-cpp_autogen/mocs_compilation.cpp -o CMakeFiles/notepad-cpp.dir/notepad-cpp_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/notepad-cpp.dir/cpp-files/main.cpp.o: CMakeFiles/notepad-cpp.dir/flags.make
 CMakeFiles/notepad-cpp.dir/cpp-files/main.cpp.o: /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/main.cpp
 CMakeFiles/notepad-cpp.dir/cpp-files/main.cpp.o: CMakeFiles/notepad-cpp.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xaprier/Desktop/git/qt-notepad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/notepad-cpp.dir/cpp-files/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/notepad-cpp.dir/cpp-files/main.cpp.o -MF CMakeFiles/notepad-cpp.dir/cpp-files/main.cpp.o.d -o CMakeFiles/notepad-cpp.dir/cpp-files/main.cpp.o -c /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/main.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/notepad-cpp.dir/cpp-files/main.cpp.o -MF CMakeFiles/notepad-cpp.dir/cpp-files/main.cpp.o.d -o CMakeFiles/notepad-cpp.dir/cpp-files/main.cpp.o -c /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/main.cpp
 
 CMakeFiles/notepad-cpp.dir/cpp-files/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/notepad-cpp.dir/cpp-files/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/main.cpp > CMakeFiles/notepad-cpp.dir/cpp-files/main.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/main.cpp > CMakeFiles/notepad-cpp.dir/cpp-files/main.cpp.i
 
 CMakeFiles/notepad-cpp.dir/cpp-files/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/notepad-cpp.dir/cpp-files/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/main.cpp -o CMakeFiles/notepad-cpp.dir/cpp-files/main.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/main.cpp -o CMakeFiles/notepad-cpp.dir/cpp-files/main.cpp.s
 
 CMakeFiles/notepad-cpp.dir/cpp-files/mainwindow.cpp.o: CMakeFiles/notepad-cpp.dir/flags.make
 CMakeFiles/notepad-cpp.dir/cpp-files/mainwindow.cpp.o: /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/mainwindow.cpp
 CMakeFiles/notepad-cpp.dir/cpp-files/mainwindow.cpp.o: CMakeFiles/notepad-cpp.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xaprier/Desktop/git/qt-notepad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/notepad-cpp.dir/cpp-files/mainwindow.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/notepad-cpp.dir/cpp-files/mainwindow.cpp.o -MF CMakeFiles/notepad-cpp.dir/cpp-files/mainwindow.cpp.o.d -o CMakeFiles/notepad-cpp.dir/cpp-files/mainwindow.cpp.o -c /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/mainwindow.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/notepad-cpp.dir/cpp-files/mainwindow.cpp.o -MF CMakeFiles/notepad-cpp.dir/cpp-files/mainwindow.cpp.o.d -o CMakeFiles/notepad-cpp.dir/cpp-files/mainwindow.cpp.o -c /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/mainwindow.cpp
 
 CMakeFiles/notepad-cpp.dir/cpp-files/mainwindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/notepad-cpp.dir/cpp-files/mainwindow.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/mainwindow.cpp > CMakeFiles/notepad-cpp.dir/cpp-files/mainwindow.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/mainwindow.cpp > CMakeFiles/notepad-cpp.dir/cpp-files/mainwindow.cpp.i
 
 CMakeFiles/notepad-cpp.dir/cpp-files/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/notepad-cpp.dir/cpp-files/mainwindow.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/mainwindow.cpp -o CMakeFiles/notepad-cpp.dir/cpp-files/mainwindow.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/mainwindow.cpp -o CMakeFiles/notepad-cpp.dir/cpp-files/mainwindow.cpp.s
 
 CMakeFiles/notepad-cpp.dir/cpp-files/finddialog.cpp.o: CMakeFiles/notepad-cpp.dir/flags.make
 CMakeFiles/notepad-cpp.dir/cpp-files/finddialog.cpp.o: /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/finddialog.cpp
 CMakeFiles/notepad-cpp.dir/cpp-files/finddialog.cpp.o: CMakeFiles/notepad-cpp.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xaprier/Desktop/git/qt-notepad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/notepad-cpp.dir/cpp-files/finddialog.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/notepad-cpp.dir/cpp-files/finddialog.cpp.o -MF CMakeFiles/notepad-cpp.dir/cpp-files/finddialog.cpp.o.d -o CMakeFiles/notepad-cpp.dir/cpp-files/finddialog.cpp.o -c /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/finddialog.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/notepad-cpp.dir/cpp-files/finddialog.cpp.o -MF CMakeFiles/notepad-cpp.dir/cpp-files/finddialog.cpp.o.d -o CMakeFiles/notepad-cpp.dir/cpp-files/finddialog.cpp.o -c /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/finddialog.cpp
 
 CMakeFiles/notepad-cpp.dir/cpp-files/finddialog.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/notepad-cpp.dir/cpp-files/finddialog.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/finddialog.cpp > CMakeFiles/notepad-cpp.dir/cpp-files/finddialog.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/finddialog.cpp > CMakeFiles/notepad-cpp.dir/cpp-files/finddialog.cpp.i
 
 CMakeFiles/notepad-cpp.dir/cpp-files/finddialog.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/notepad-cpp.dir/cpp-files/finddialog.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/finddialog.cpp -o CMakeFiles/notepad-cpp.dir/cpp-files/finddialog.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/finddialog.cpp -o CMakeFiles/notepad-cpp.dir/cpp-files/finddialog.cpp.s
 
 CMakeFiles/notepad-cpp.dir/cpp-files/replacedialog.cpp.o: CMakeFiles/notepad-cpp.dir/flags.make
 CMakeFiles/notepad-cpp.dir/cpp-files/replacedialog.cpp.o: /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/replacedialog.cpp
 CMakeFiles/notepad-cpp.dir/cpp-files/replacedialog.cpp.o: CMakeFiles/notepad-cpp.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xaprier/Desktop/git/qt-notepad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/notepad-cpp.dir/cpp-files/replacedialog.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/notepad-cpp.dir/cpp-files/replacedialog.cpp.o -MF CMakeFiles/notepad-cpp.dir/cpp-files/replacedialog.cpp.o.d -o CMakeFiles/notepad-cpp.dir/cpp-files/replacedialog.cpp.o -c /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/replacedialog.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/notepad-cpp.dir/cpp-files/replacedialog.cpp.o -MF CMakeFiles/notepad-cpp.dir/cpp-files/replacedialog.cpp.o.d -o CMakeFiles/notepad-cpp.dir/cpp-files/replacedialog.cpp.o -c /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/replacedialog.cpp
 
 CMakeFiles/notepad-cpp.dir/cpp-files/replacedialog.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/notepad-cpp.dir/cpp-files/replacedialog.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/replacedialog.cpp > CMakeFiles/notepad-cpp.dir/cpp-files/replacedialog.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/replacedialog.cpp > CMakeFiles/notepad-cpp.dir/cpp-files/replacedialog.cpp.i
 
 CMakeFiles/notepad-cpp.dir/cpp-files/replacedialog.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/notepad-cpp.dir/cpp-files/replacedialog.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/replacedialog.cpp -o CMakeFiles/notepad-cpp.dir/cpp-files/replacedialog.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xaprier/Desktop/git/qt-notepad/src/cpp-files/replacedialog.cpp -o CMakeFiles/notepad-cpp.dir/cpp-files/replacedialog.cpp.s
 
 # Object files for target notepad-cpp
 notepad__cpp_OBJECTS = \
