@@ -8,35 +8,35 @@
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
-class mainwindow;
+    class mainwindow;
 }
 QT_END_NAMESPACE
 
 class mainwindow : public QMainWindow {
     Q_OBJECT
 
-  public:
-    explicit mainwindow(QWidget *parent = nullptr);
+   public:
+    explicit mainwindow( QWidget *parent = nullptr );
     ~mainwindow();
 
-  private slots:
+   private slots:
     void newDocument();
     void open();
     void save();
     void saveAs();
     void selectFont();
-    void setFontUnderLine(bool underline);
-    void setFontItalic(bool italic);
-    void setFontBold(bool bold);
+    void setFontUnderLine( bool underline );
+    void setFontItalic( bool italic );
+    void setFontBold( bool bold );
     void about();
-    void closeEvent(QCloseEvent *event);
+    void closeEvent( QCloseEvent *event );
     void cursorLoc();
     void notSaved();
     void exit();
     void findFunc();
     void replaceFunc();
 
-  private:
+   private:
     Ui::mainwindow *ui;
     QString currentFile;
 };
