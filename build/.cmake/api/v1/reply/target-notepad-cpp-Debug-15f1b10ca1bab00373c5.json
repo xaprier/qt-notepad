@@ -183,17 +183,17 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/usr/lib/libQt5Widgets.so.5.15.5",
+				"fragment" : "/usr/lib/libQt5Widgets.so.5.15.6",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 8,
-				"fragment" : "/usr/lib/libQt5Gui.so.5.15.5",
+				"fragment" : "/usr/lib/libQt5Gui.so.5.15.6",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 8,
-				"fragment" : "/usr/lib/libQt5Core.so.5.15.5",
+				"fragment" : "/usr/lib/libQt5Core.so.5.15.6",
 				"role" : "libraries"
 			}
 		],

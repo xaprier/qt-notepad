@@ -7,9 +7,9 @@
 	"CMAKE_LIST_FILES" : 
 	[
 		"/home/xaprier/Desktop/git/qt-notepad/src/CMakeLists.txt",
-		"/home/xaprier/Desktop/git/qt-notepad/build/CMakeFiles/3.24.1/CMakeSystem.cmake",
+		"/home/xaprier/Desktop/git/qt-notepad/build/CMakeFiles/3.24.2/CMakeSystem.cmake",
 		"/usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake",
-		"/home/xaprier/Desktop/git/qt-notepad/build/CMakeFiles/3.24.1/CMakeCXXCompiler.cmake",
+		"/home/xaprier/Desktop/git/qt-notepad/build/CMakeFiles/3.24.2/CMakeCXXCompiler.cmake",
 		"/usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake",
 		"/usr/share/cmake/Modules/CMakeGenericSystem.cmake",
 		"/usr/share/cmake/Modules/CMakeInitializeConfigs.cmake",

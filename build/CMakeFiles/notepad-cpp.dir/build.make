@@ -156,9 +156,9 @@ notepad-cpp: CMakeFiles/notepad-cpp.dir/cpp-files/mainwindow.cpp.o
 notepad-cpp: CMakeFiles/notepad-cpp.dir/cpp-files/finddialog.cpp.o
 notepad-cpp: CMakeFiles/notepad-cpp.dir/cpp-files/replacedialog.cpp.o
 notepad-cpp: CMakeFiles/notepad-cpp.dir/build.make
-notepad-cpp: /usr/lib/libQt5Widgets.so.5.15.5
-notepad-cpp: /usr/lib/libQt5Gui.so.5.15.5
-notepad-cpp: /usr/lib/libQt5Core.so.5.15.5
+notepad-cpp: /usr/lib/libQt5Widgets.so.5.15.6
+notepad-cpp: /usr/lib/libQt5Gui.so.5.15.6
+notepad-cpp: /usr/lib/libQt5Core.so.5.15.6
 notepad-cpp: CMakeFiles/notepad-cpp.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xaprier/Desktop/git/qt-notepad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable notepad-cpp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/notepad-cpp.dir/link.txt --verbose=$(VERBOSE)
