@@ -7,8 +7,8 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "CMakeFiles/3.24.1/CMakeCXXCompiler.cmake"
-  "CMakeFiles/3.24.1/CMakeSystem.cmake"
+  "CMakeFiles/3.24.2/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.24.2/CMakeSystem.cmake"
   "/home/xaprier/Desktop/git/qt-notepad/src/CMakeLists.txt"
   "/usr/lib64/cmake/Qt5/Qt5Config.cmake"
   "/usr/lib64/cmake/Qt5/Qt5ConfigVersion.cmake"
