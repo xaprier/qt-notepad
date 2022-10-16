@@ -9,23 +9,25 @@
 #include "finddialog.h"
 
 namespace Ui {
-class replaceDialog;
+    class replaceDialog;
 }
 
 class replaceDialog : public QDialog {
     Q_OBJECT
 
-  public:
-    explicit replaceDialog(QWidget* parent = nullptr, QTextEdit* textFile = nullptr, QTextCursor cursor = QTextCursor());
+   public:
+    explicit replaceDialog( QWidget* parent = nullptr,
+                            QTextEdit* textFile = nullptr,
+                            QTextCursor cursor = QTextCursor() );
     ~replaceDialog();
     friend class findDialog;
 
-  private slots:
+   private slots:
     virtual void on_pushFind_clicked();
     void on_pushReplace_clicked();
     void on_pushRAll_clicked();
 
-  private:
+   private:
     Ui::replaceDialog* ui;
     QTextEdit* fileText;
     QTextCursor selectCursor;

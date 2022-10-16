@@ -6,21 +6,23 @@
 #include <QTextEdit>
 
 namespace Ui {
-class findDialog;
+    class findDialog;
 }
 
 class findDialog : public QDialog {
     Q_OBJECT
 
-  public:
-    explicit findDialog(QWidget* parent = nullptr, QTextEdit* textFile = nullptr, QTextCursor cursor = QTextCursor(), QString fW = "");
+   public:
+    explicit findDialog( QWidget* parent = nullptr,
+                         QTextEdit* textFile = nullptr,
+                         QTextCursor cursor = QTextCursor(), QString fW = "" );
     ~findDialog();
     friend class replaceDialog;
 
-  private slots:
+   private slots:
     void pushFind();
 
-  private:
+   private:
     Ui::findDialog* findui;
     QWidget* widget;
     QTextEdit* fileText;
