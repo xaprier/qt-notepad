@@ -38,11 +38,11 @@ Than our Makefile is ready for build the source code. We have to access the dire
 cd ../build && make
 ```
 
-Than our compiled program is ready for run in the directory of the makefile with the name "notepad-cpp"
+Than our compiled program is ready for run in the directory of the makefile with the name "qt-notepad"
 You can run the program with this command
 
 ```sh
-./notepad-cpp
+./qt-notepad
 ```
 
 # Documentation
