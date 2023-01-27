@@ -1,5 +1,5 @@
 #include <QApplication>
-
+#include <iostream>
 #include "../header-files/mainwindow.h"
 
 int main( int argc, char *argv[] ) {
@@ -7,4 +7,5 @@ int main( int argc, char *argv[] ) {
     mainwindow w;
     w.show();
     return QApplication::exec();
+    
 }
