@@ -2,6 +2,8 @@
 .vscode
 # jetbrains settings
 .idea
-
+# kdevelop settings
+src/.kdev4
 # build dir
 build
+
