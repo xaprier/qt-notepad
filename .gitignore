@@ -5,5 +5,5 @@
 # kdevelop settings
 src/.kdev4
 # build dir
-build
+build*
 
