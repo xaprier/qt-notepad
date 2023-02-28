@@ -31,6 +31,10 @@
   <property name="windowTitle">
    <string>Find Text...</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/resources/icon.png</normaloff>:/resources/icon.png</iconset>
+  </property>
   <widget class="QLineEdit" name="txtFind">
    <property name="geometry">
     <rect>
@@ -77,6 +81,8 @@
   <tabstop>txtFind</tabstop>
   <tabstop>pushFind</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

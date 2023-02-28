@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>606</width>
-    <height>567</height>
+    <width>865</width>
+    <height>632</height>
    </rect>
   </property>
   <property name="font">
@@ -25,8 +25,8 @@
    <string>Notepad</string>
   </property>
   <property name="windowIcon">
-   <iconset theme="icon_mynotepad">
-    <normaloff>icon.png</normaloff>icon.png</iconset>
+   <iconset resource="resources.qrc">
+    <normaloff>:/resources/icon.png</normaloff>:/resources/icon.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -39,7 +39,7 @@
       </property>
      </widget>
     </item>
-    <item row="1" column="0">
+    <item row="1" column="1">
      <widget class="QLabel" name="showLine">
       <property name="text">
        <string>Text</string>
@@ -53,8 +53,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>606</width>
-     <height>22</height>
+     <width>865</width>
+     <height>26</height>
     </rect>
    </property>
    <property name="font">
@@ -218,6 +218,8 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

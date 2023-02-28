@@ -24,6 +24,7 @@ mainwindow::mainwindow(QWidget *parent)
         // creating event controls
         // when the action clicked, do this function...
         // trigger on click
+    ui->statusbar->addWidget(ui->showLine);
         connect(ui->actionNew, &QAction::triggered, this,
                 &mainwindow::newDocument);
     connect(ui->actionOpen, &QAction::triggered, this, &mainwindow::open);
