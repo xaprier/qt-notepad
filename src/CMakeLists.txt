@@ -12,8 +12,6 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_PREFIX_PATH "~/Qt/6.4.1/gcc_64/lib/cmake")
 
-add_compile_options(-static-libgcc -static-libstdc++)
-
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
@@ -31,6 +29,8 @@ set(PROJECT_SOURCES
     cpp-files/replacedialog.cpp
     header-files/replacedialog.h
     design/replacedialog.ui
+
+    design/resources.qrc
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
